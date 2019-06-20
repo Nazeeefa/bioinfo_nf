@@ -1,6 +1,6 @@
 ### What to find:
 
-- Script for demultiplexing FASTQ files (written in Python 3)
+- Script for demultiplexing (written in Python 3)
 
 |> |Time Statistics|
 |:--|:-------:|
