@@ -1,0 +1,5 @@
+Sample_A ACTGGCTG
+Sample_B TATCCAGG
+Sample_C GGACCTTA
+Sample_D TAACGGCA
+Sample_E CCTATGGA
