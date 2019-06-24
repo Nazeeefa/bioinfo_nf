@@ -1,4 +1,6 @@
-### What to find:
+## What to find:
+
+### Python Scripts (py_scripts):
 
 - Script for demultiplexing (written in Python 3)
 
@@ -8,4 +10,9 @@
 |user|0m11.689s|
 |sys|0m11.089s||
 
-- Bash/awk one-liners
+### R Scripts (scRipts)
+
+- sleep.Rmd
+
+### Command Line Snippets
+- terminal.md
