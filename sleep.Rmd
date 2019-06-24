@@ -1,0 +1,92 @@
+---
+title: "Sleep"
+author: "Nazeefa Fatima"
+date: "6/20/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Analysing sleep dataset obtained from https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/sleep.html
+
+```{r packages}
+
+# Loading the packages
+library(datasets)
+library(ggplot2)
+```
+
+```{r data}
+
+# Loading the data
+data(sleep)
+
+# Putting into dataframe
+df <- sleep
+df
+
+# Variables:
+# extra = hours of sleep (numerical)
+# group = two drug types (categorical) with each given to every participant
+# ID refers to participant ID
+
+# Quick look at data structure
+head(df)
+```
+
+```{r plot_1, fig.height=3}
+
+plot <- ggplot(df, aes(x = ID, y = extra, color = group)) +
+  geom_point(aes(color = group), shape = 18, size = 4) + 
+  geom_smooth() +
+  labs(title = "Effect of Drugs on Sleep Hours",
+     subtitle = "Number of Participants = 10",
+     x = "Participant ID",
+     y = "Extra Hours of Sleep",
+     color = "Drug Type\n") +
+  theme_bw() +
+  theme(
+      axis.line = element_line(colour="grey"),
+      panel.border = element_blank(),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      text = element_text(size=20)
+      )
+plot
+```
+
+```{r plot_2, fig.height=3}
+
+# Creating another plot to see which participant slept less/mer and whether there is any overlap
+
+# Repalcing x-axis for drug types, keeping y-axis the same, and assigning IDs as data points
+plot_2 <- ggplot(df, aes(x = group, y = extra, group= ID)) +
+  geom_point(aes(color=ID), shape = 18, size = 5) + 
+  geom_line(size=1, alpha=0.3) +
+  labs(title = "Effect of Two Sleeping Drugs on Sleep Hours",
+     subtitle = "Number of Participants = 10",
+     x = "Drug Type",
+     y = "Extra Hours of Sleep",
+     color = "Participant ID\n") +
+  theme_bw() + 
+  theme(
+        axis.line = element_line(colour="grey"),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        text = element_text(size=20)
+        )
+plot_2
+
+```
+
+Conclusions:
+
+- Effect of drug 2 on sleeping hours along the same rate for participants 4 and 5, and for participants 6 and 9.
+- Participant 7 slept more as compared to the rest.
+- Both drugs had little effect on sleeping hours of participants 1 and 8.
+- Overall, drug 2 appears to have more effect on sleeping hours.
