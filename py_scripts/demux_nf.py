@@ -85,6 +85,8 @@ def barcode_to_sample(fastq, barcodes_file):
 					if fout != "":
 						fout.close()
 					# print(sample_fout)
+					# note: gzip.open has high computational load
+					# note: "at" != efficient to use & re-running the script will append to file.
 					fout = gzip.open(sample_fout + "_demux.fastq.gz", "at")
 					fout.write(line)
 			else:
