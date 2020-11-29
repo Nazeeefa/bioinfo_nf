@@ -16,3 +16,6 @@
 
 ### Command Line Snippets
 - terminal.md
+
+### Slides
+- From conference/event presentations
