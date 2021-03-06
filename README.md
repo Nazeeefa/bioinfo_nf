@@ -10,7 +10,7 @@
 |user|0m11.689s|
 |sys|0m11.089s||
 
-### R Scripts (scRipts)
+### scRipts -  R Scripts:
 
 - sleep.Rmd
 
