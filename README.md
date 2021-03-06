@@ -1,6 +1,6 @@
 ## What to find:
 
-### Python Scripts (py_scripts):
+### py_scripts - Python Scripts:
 
 - Script for demultiplexing (written in Python 3)
 
