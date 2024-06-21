@@ -1,3 +1,4 @@
+## Bioinformatics Resources on GitHub
  The list was initially compiled for [RSG-Sweden](rsg-sweden.iscbsc.org)
 
 1. [Getting started with genomics tools and resources](https://github.com/crazyhottommy/getting-started-with-genomics-tools-and-resources)
@@ -11,3 +12,19 @@
 9. [Self-taught courses in bioinformatics](https://github.com/ossu/bioinformatics)
 10. [BioInfoHacks: Bioinformatics Hacks](https://github.com/audy/bioinformatics-hacks)
 11. [Bioinformatics training by Pacific Biosciences](https://github.com/PacificBiosciences/Bioinformatics-Training/wiki)
+
+## A collection of useful reads on human reference genomes
+
+- [Which human reference genome to use?](https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use)
+- You may be interested in checking out [awesome-sequencing-tech-resources](https://github.com/Nazeeefa/awesome-sequencing-tech-papers)
+
+## Doing bioinformatics in terminal
+#### Counts the number of reads in compressed FASTQ file
+```
+zcat < sample_lane.fastq.gz | awk '{i++}END{print i/4}'
+```
+#### See where sequence of interest in sequence files occurs
+```
+grep - n CATTAG *fastq
+```
+  
